@@ -1,0 +1,143 @@
+body{
+        margin: auto;
+        width: 100%;
+    }
+
+    #api{
+        margin: auto;
+        margin-top: 100px;
+        max-width: 1100px;
+    }
+
+    .discord-widget{
+        line-height: 51px !important;
+        font-size: 20px !important;
+        font-family: 'Gothic A1', sans-serif !important;
+    }
+
+    .discord-channel{
+        width: 100% !important;
+        text-align: left !important;
+    }
+    
+    .discord-title{
+        height: 40px !important;
+        font-family: 'IBM Plex Sans KR', sans-serif !important;
+    }
+    .discord-join{
+        font-family: 'IBM Plex Sans KR', sans-serif !important;
+        height: 40px !important;
+    }
+
+
+/*main*/
+
+#main-title{
+    width: 100%;
+    height: 25rem;
+
+    margin-top: -15px;
+}
+
+#main-img{
+    position: relative;
+}
+
+#main-img img{
+    width: 100%;
+    height: 25rem;
+}
+
+#color-overlay{
+    position:absolute;
+    top: 120px;
+    left: 0;
+    width: 100%;
+    height: 25rem;
+
+    background-color: rgba(0, 0, 0, 0.62);
+}
+
+#text-overlay {
+  position: absolute;
+  top: 30%;
+  left: 0; 
+
+  width: 100%;
+}
+
+#text-overlay a {
+    color: white; 
+    font-size: 50px; 
+
+    font-family: 'Gothic A1', sans-serif;
+    font-weight: 700;
+
+    width: 100%;
+
+    display: block;
+    text-align: center;
+}
+
+#text-overlay span{
+    color: white; 
+    font-size: 25px; 
+    text-align: center;
+
+    font-family: 'Gothic A1', sans-serif;
+    font-weight: 400;
+
+    display: block;
+    text-align: center;
+}
+
+#main-btn{
+    width: 100%;
+    margin-top: 90px;
+
+    margin-bottom: 130px;
+}
+
+#main-join-btn{
+    width: 200px;
+    height: 80px;
+    margin: auto;
+
+    text-align: center;
+    font-family: 'Gothic A1', sans-serif;
+    font-weight: 400;
+
+    font-size: 25px;
+    
+    background-color: rgb(120, 1, 255);
+    color: white;
+
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px gray;
+}
+
+#main-join-btn:hover{
+    color: rgb(255, 193, 78);
+}
+
+#main-join-btn:active{
+    color: rgb(255, 123, 0);
+    box-shadow: inset 0px 0px 10px 5px gray;
+}
+
+#main-join-btn a {
+    display: block;
+    padding-top: 25px;
+}
+
+#main {
+    margin-top: 100px;
+    width:100%;
+    text-align: center;
+
+    font-size: 23px;
+}
+
+#main img{
+    margin-bottom: 60px;
+}
