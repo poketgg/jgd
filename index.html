@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,49 +12,62 @@
     <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./top.css">
+    <link rel="stylesheet" href="./index.css">
+    <link rel="import" href="./top.html">
 
     <title>[Discord] 잠겜동</title>
 </head>
 
-<style>
-    body{
-        margin: auto;
-        max-width: 1300px;
-    }
-    
-    *{
-        font-family: 'IBM Plex Sans KR', sans-serif !important;
-    }
-    .discord-title{
-        height: 40px !important;
-        font-family: 'IBM Plex Sans KR', sans-serif !important;
-    }
-    .discord-join{
-        font-family: 'IBM Plex Sans KR', sans-serif !important;
-        height: 40px !important;
-    }
-</style>
-
 <body>
-    <script type="text/javascript" src="//cdn.jsdelivr.net/discord-widget/latest/discord-widget.min.js"></script>
-    <script type="text/javascript">
-        discordWidget.init({
-        serverId: '959844710992732212',
-        title: '[ 잠겜동 ] Server Status_V1',
-        join: true,
-        alphabetical: false,
-        theme: 'dark',
-        hideChannels: ['Channel Name 1', 'Channel Name 2'],
-        showAllUsers: true,
-        allUsersDefaultState: true,
-        showNick: true
+    <script>
+        window.addEventListener('load', function() {
+            var allElements = document.getElementsByTagName('*');
+            Array.prototype.forEach.call(allElements, function(el) {
+                var includePath = el.dataset.includePath;
+                if (includePath) {
+                    var xhttp = new XMLHttpRequest();
+                    xhttp.onreadystatechange = function () {
+                        if (this.readyState == 4 && this.status == 200) {
+                            el.outerHTML = this.responseText;
+                        }
+                    };
+                    xhttp.open('GET', includePath, true);
+                    xhttp.send();
+                }
+            });
         });
-        discordWidget.render();
     </script>
 
-<div class="discord-widget" style="line-height: 51px; font-size: 20px; font-family: 'Gothic A1', sans-serif;">
-</div>
+    <div id="top" style="margin-bottom: 85px;">
+        <div data-include-path="./top.html"></div>
+    </div>
+
+    <div id="main-title">
+        <div id="main-img">
+            <img src="./img/main-img.jpg">
+        </div>
+
+        <div id="color-overlay"></div>
+
+        <div id="text-overlay">
+            <a>잠겜동</a><br>
+            <span>Game & Friendship　Discord Channel.</span>
+        </div>
+    </div>
+    
+    <div id="main">
+        <img src="./img/discord.svg" width="250px"><br>
+        <span>해당 링크는 유효기간이 영구인 디스코드 링크입니다.<br> 입장하시려면 아래 버튼을 눌러주세요.</span>
+    </div>
+
+    <div id="main-btn">
+        <div id="main-join-btn" onclick="window.open('https://discord.com/invite/HFx22e5K');" style="cursor: pointer;">
+            <a>서버 입장하기</a>
+        </div>
+    </div>
 </body>
 </html>
